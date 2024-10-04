@@ -6,6 +6,10 @@ h1 {
     padding-top: 0px;
 }
 
+a {
+    text-decoration: none;
+}
+
 ol {
     border-right: 1px solid grey;
     width: 1/9fr;
