@@ -1,0 +1,35 @@
+h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    margin: 0px;
+    padding-top: 0px;
+}
+
+ol {
+    border-right: 1px solid grey;
+    width: 1/9fr;
+    margin: 0px;
+    padding: 20px 20px 20px 30px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    border-bottom: 1px gray solid;
+}
+
+@media(max-width:800px){
+    #grid {
+        display:block;
+    }
+    ol {
+        border-right: none;
+        display:block;
+        border-bottom: 1px gray solid;
+    }
+}
+
+body {
+    margin: 0;
+}
