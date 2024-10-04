@@ -1,23 +1,58 @@
 <!DOCTYPE html>
- <html>
- <head>
- <title>WEB1 - JavaScript </title>
- <meta charset="utf-8">
- </head>
- <body>
- <h1><a href="index.html">WEB</a></h1>
- <ol>
- <li><a href="1.html">HTML</a></li>
- <li><a href="2.html">CSS</a></li>
- <li><a href="3.html">JavaScript</a></li>
- </ol>
- <h2>JavaScript 무엇인가?</h2>
- <img src="js_icon.png" width="25px"
- <span> <a href="https://ko.javascript.info/" title="javascript tutorial">JavaScript</a>(/ˈdʒɑːvəskrɪpt/),[10] often abbreviated JS, is a programming language that is one of 
-the core technologies of the World Wide Web, alongside HTML and CSS.[11] Over 97% of websites 
-use JavaScript on the client side for web page behavior,[12] often incorporating third-party 
-libraries.[13] All major web browsers have a dedicated JavaScript engine to execute
- </span>
- <div><video src="coding_3.mp4" controls width="500px"></div>
- </body>
- </html>
+<html>
+<style>
+    h1 {
+        font-size: 45px;
+        text-align: center;
+        border-bottom: 1px gray solid;
+        margin: 0;
+    }
+
+    body {
+        margin: 0;
+    }
+    
+    #grid {
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+    }
+
+    ol {
+        width:150px;
+        border-right: 1px gray solid;
+        margin: 0 0 0 10px;
+        padding: 20px;
+    }
+</style>
+
+<head>
+    <title>WEB1 - JavaScript </title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+        <div style="padding-left: 10px;">
+            <h2>JavaScript 무엇인가?</h2>
+            <img src="js_icon.png" width="25px">
+            <span> <a href="https://ko.javascript.info/"
+                    title="javascript tutorial">JavaScript</a>(/ˈdʒɑːvəskrɪpt/),[10] often abbreviated JS, is a
+                programming
+                language
+                that is one of
+                the core technologies of the World Wide Web, alongside HTML and CSS.[11] Over 97% of websites
+                use JavaScript on the client side for web page behavior,[12] often incorporating third-party
+                libraries.[13] All major web browsers have a dedicated JavaScript engine to execute
+            </span>
+            <div style="text-align: center;"><video src="coding_3.mp4" controls width="500px"></div>
+        </div>
+    </div>
+</body>
+
+</html>
