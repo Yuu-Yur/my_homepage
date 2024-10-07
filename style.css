@@ -6,13 +6,20 @@ h1 {
     padding-top: 0px;
 }
 
+input {
+    width : 100%;
+    padding : 10px 0%;
+}
 
 a {
     text-decoration: none;
 }
 
-ol {
+#side {
     border-right: 1px solid grey;
+}
+
+ol {
     width: 1/9fr;
     margin: 0px;
     padding: 20px 20px 20px 30px;
@@ -27,6 +34,9 @@ ol {
 @media(max-width:800px){
     #grid {
         display:block;
+    }
+    #side {
+        border-right: none;
     }
     ol {
         border-right: none;
