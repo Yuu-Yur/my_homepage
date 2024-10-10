@@ -41,7 +41,7 @@
     font-size: 25px;
 }
 
-div h1{
+fieldset > h1{
     color: violet;
     font-size: 35px;
 }
@@ -97,4 +97,20 @@ th,td{
 
 fieldset {
     margin: 30px auto;
+}
+
+body > h1 {
+    text-align: center;
+    border-bottom: 1px solid gray;
+    text-size-adjust: 45px;
+}
+
+#side {
+    border-right: 1px solid grey;
+}
+
+ol {
+    width: 1/9fr;
+    margin: 0px;
+    padding: 20px 20px 20px 30px;
 }

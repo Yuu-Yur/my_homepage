@@ -48,3 +48,10 @@ ol {
 body {
     margin: 0;
 }
+
+a[class="new"]::after {
+    content: "new!";
+    margin-left: 20px;
+    height: 15px;
+    background-color: rgba(228, 77, 77, 0.849);
+}
