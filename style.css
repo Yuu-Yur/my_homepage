@@ -74,3 +74,59 @@ fieldset ul {
 div > h2 {
     color: violet;
 }
+
+legend + p {
+    font-weight: bold;
+}
+
+legend ~ p {
+    font-style: italic;
+}
+
+li[title] {
+    color: crimson 
+}
+
+[title=att2] {
+    font-weight : bold;
+}
+
+[title|=att4] {
+    font-style : italic;
+}
+
+[title^=at]  {
+    background : yellow;
+}
+
+[title$=t6] {
+    text-align : center;
+}
+
+[title*=tt] {
+    text-shadow: 1px 1px rebeccapurple;
+}
+
+ul a:link {
+    color: blue;
+}
+
+ul a:visited {
+    color:red;
+}
+
+#activetest {
+    width: 300px;
+}
+
+#activetest:active {
+    width: 600px;
+}
+
+#hovertest {
+    width:300px;
+}
+
+#hovertest:hover {
+    width:600px;
+}

@@ -17,8 +17,8 @@
                 <li><a href="2.html">CSS</a></li>
                 <li><a href="3.html">JavaScript</a></li>
                 <li><a href="9.html" class="new">5~9장</a> </li>
-                <li><a href="10.html" class="new">10장</a></li>
-                <li><a href="11.html" class="new">11장</a></li>
+                <li><a href="10.html" class="new">10~12장</a></li>
+                <li><a href="11.html" class="new">13장</a></li>
             </ol>
         </div>
         <div style="padding-left: 10px;">
@@ -27,21 +27,23 @@
                 <legend>
                     연결 선택자
                 </legend>
-                보통 css에서 tag를 선택하여 style을 부여하면 모든 tag가 선택이 되기에 class나 id를 부여하여 관리한다
-                그러나 이러한 방식도 부여하는 작업이 필요하므로 수가 커질수록 반복작업이 많아진다
-                이럴 때 미리 정해진 몇가지의 방법으로 class나 id를 부여하지 않고도 특정한 tag를 선택하여 관리할 수 있다
+                <p>보통 css에서 tag를 선택하여 style을 부여하면 모든 tag가 선택이 되기에 class나 id를 부여하여 관리한다</p>
+                <p>그러나 이러한 방식도 부여하는 작업이 필요하므로 수가 커질수록 반복작업이 많아진다</p>
+                <p>이럴 때 미리 정해진 몇가지의 방법으로 class나 id를 부여하지 않고도 특정한 tag를 선택하여 관리할 수 있다</p>
                 <ul>
                     <li>
-                        하위 선택자 : 가장 간단한 방법으로 특정 부모아래의 모든 자식을 선택한다 ex fieldset ul 이 방법으로 이후 fieldset에 속한 리스트의 글자 크기는 18px가 된다
+                        하위 선택자 : 가장 간단한 방법으로 특정 부모아래의 모든 자식을 선택한다 ex fieldset ul 이 방법으로 이후 fieldset에 속한 리스트의 글자 크기는
+                        18px가 된다
                     </li>
                     <li>
-                        자식 선택자 : 하위 선택자와 비슷하지만 특정 부모를 가진 모든 자식을 선택한다 하위 선택자가 부모가 주라면 자식 선택자는 자식이 주이다 ex div > h2 color violet 이것으로 부모가 div인 모든 h2의 글자색은 violet이 된다
+                        자식 선택자 : 하위 선택자와 비슷하지만 특정 부모를 가진 모든 자식을 선택한다 하위 선택자가 부모가 주라면 자식 선택자는 자식이 주이다 ex div > h2 color
+                        violet 이것으로 부모가 div인 모든 h2의 글자색은 violet이 된다
                     </li>
                     <li>
-                        인접 형제 선택자 : +
+                        인접 형제 선택자 : 형제 중 가장 첫번째를 선택한다 ex legend + p fontweight bold 이것으로 legend의 형제중 첫번째 p가 bold가 된다
                     </li>
                     <li>
-                        형제 선택자 : ~
+                        형제 선택자 : 형제 모두를 선택한다 ex legend ~ p fontstyle italic 이것으로 legend의 형제인 p 모두가 italic이 된다
                     </li>
                 </ul>
             </fieldset>
@@ -49,11 +51,71 @@
                 <legend>
                     속성 선택자
                 </legend>
+                <p>
+                    연결 선택자는 tag를 의존하여 tag를 선택한다면 속성 선택자는 속성을 의존하여 tag를 선택한다
+                </p>
+                <p>
+
+                </p>
+                <p>
+                    예를 위해 이 리스트에는 모두 att숫자 의 title을 붙였다
+                </p>
+                <ul>
+                    <li title="att1">
+                        속성 선택자 []안에 원하는 속성을 넣어 선택할 수 있다 []앞에 태그를 지정할 수도 있다 ex li[title] color : crimson;
+                    </li>
+                    <li title="att2">
+                        속성 안의 값도 지정하여 선택할 수 있다 일치는 []안에 속성과 값을 =로 붙인다 ex [title=att1] fontweight : bold;
+                    </li>
+                    <li title="att3">
+                        속성 안에 여러 값이 있을 때에도 특정 속성과 일치하는 값이 있다면 선택할 수 있다 ex [class~=a] fontsize :100px;
+                    </li>
+                    <li title="att4-test">
+                        일치와 비슷하지만 -이 붙어있는 것 까지 선택하는 특수한 경우에 사용 ex [title|=att4] fontstyle : italic;
+                    </li>
+                    <li title="att5">
+                        특정 값으로 시작하는 속성을 가진 tag 선택 가능 ex [title^=at] background : yellow;
+                    </li>
+                    <li title="att6">
+                        특정 값으로 끝나는 속성을 가진 tag 선택 가능 ex [title$=t6] textalign="center";
+                    </li>
+                    <li title="att7">
+                        일부가 일치 하는 값을 가진 속성의 tag 선택 가능 ex [title*=tt] text-shadow: 2px 1px rebeccapurple;
+                    </li>
+                </ul>
             </fieldset>
             <fieldset>
                 <legend>
                     가상 클래스 선택자와 가상 요소
                 </legend>
+                <p>
+                    사용자의 동작에 반응 하는 가상 클래스로서
+                </p>
+                <p>
+                    특정한 상황에 맞추어 스타일을 변경할 수 있다
+                </p>
+                <ul>
+                    <a href="dummy.html"><li>
+                        :link 방문한 기록이 없는 링크 ul a:link {color:blue;}
+                    </li></a>
+                    <a href="dummy2.html"><li>
+
+                        :visited 방문한 기록이 있는 링크 ul a:visited {color:red;}
+                    </li></a>
+                    <a href="dummy3.html"><li>
+                        :active 요소가 활성화 되었을 때 ex #activetest:active {width: 600px;}
+                    </li></a>
+                    <input type="button" value=":active" id="activetest">
+                    <a href="dummy4.html"><li>
+                        :hover 요소 위에 마우스를 올렸을 때 ex #hovertest:hover {width:600px;}
+                    </li></a>
+                    <input type="button" value=":hover" id="hovertest">
+                    <a href="dummy.html"><li>
+                    </li></a>
+                    <a href="dummy.html"><li></li></a>
+                    <a href="dummy.html"><li></li></a>
+                    <a href="dummy.html"><li></li></a>
+                </ul>
             </fieldset>
         </div>
     </div>
