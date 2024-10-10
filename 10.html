@@ -94,7 +94,7 @@
                 <p>
                     특정한 상황에 맞추어 스타일을 변경할 수 있다
                 </p>
-                <ul>
+                <ul id="test10">
                     <a href="dummy.html"><li>
                         :link 방문한 기록이 없는 링크 ul a:link {color:blue;}
                     </li></a>
@@ -102,19 +102,46 @@
 
                         :visited 방문한 기록이 있는 링크 ul a:visited {color:red;}
                     </li></a>
-                    <a href="dummy3.html"><li>
+                    <li>
                         :active 요소가 활성화 되었을 때 ex #activetest:active {width: 600px;}
-                    </li></a>
+                    </li>
                     <input type="button" value=":active" id="activetest">
-                    <a href="dummy4.html"><li>
+                    <li>
                         :hover 요소 위에 마우스를 올렸을 때 ex #hovertest:hover {width:600px;}
-                    </li></a>
+                    </li>
                     <input type="button" value=":hover" id="hovertest">
-                    <a href="dummy.html"><li>
+                    <a href="#activetest"><li> 
+                        :target 링크와 같이 써야 하며 active하면 ex #activetest:target{background : red;}
                     </li></a>
-                    <a href="dummy.html"><li></li></a>
-                    <a href="dummy.html"><li></li></a>
-                    <a href="dummy.html"><li></li></a>
+                    <a href="#hovertest"><li> 
+                        :target  가리키는 대상의 스타일을 변화시킨다 ex #hovertest:target{background : blue;}
+                    </li></a>
+                    <li>
+                        :enabled, :disabled 해당 대상이 enabled나 disabled일때 스타일을 변화시킨다 ex .abledtest:enabled,disabled {background: red,blue;}
+                    </li>
+                    <input type="button" value="enable" class="abledtest" style="width:600px"> <input type="button" value="disabled" class="abledtest" disabled style="width:600px">
+                    <li>
+                        :checked 해당 대상이 라디오나 체크 일때 체크했을 경우 스타일을 변화 ex #checkedtest:checked + label {background : black;color : white;}
+                    </li>
+                    <input type="checkbox" name="test" id="checkedtest"><label for="checkedtest">checkedtest</label>
+                    <li>
+                        :not 해당 이외의 대상을 선택 ex ul input[type=radio]:not([name=nott2]) + label {background : black}
+                    </li>
+                    <input type="radio" name="nott1" id="aa"><label for="#aa">a</label>
+                    <input type="radio" name="nott2" id="bb"><label for="#bb">b</label>
+                    <input type="radio" name="nott3" id="cc"><label for="#cc">c</label>
+                    <li>
+                        문서 구조에 따라서 선택도 가능하다 :only-child, :first-child, :last-child, nth-child(n), nth-last_child(n)
+                    </li>
+                    <li>
+                        임의의 부모 아래에서 임의의 자식이 하나뿐일때 선택, 여러 자식중 첫번째, 여러 자식중 마지막, 여러 자식중 n번째, 여러 자식중 마지막에서 n번째
+                    </li>
+                    <li>
+                        또 :앞에 tag를 붙인 다음 child를 of type로 바꾸면 임의의 부모를 가진 해당 tag 중에서 각각이 선택된다 예외로 only child만 only type of 로 변환
+                    </li>
+                    <li>
+                        ex #test10 li:last-of-type{font-weight: bold;}
+                    </li>
                 </ul>
             </fieldset>
         </div>
