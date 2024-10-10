@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <title>10</title>
 </head>
+
 <body>
     <h1><a href="index.html">Yuu's Homepage</a></h1>
     <div id="grid">
@@ -20,11 +22,41 @@
             </ol>
         </div>
         <div style="padding-left: 10px;">
-            <h2 class="Chapter">10장 실습</h2>
-            연결 선택자
-            속성 선택자
-            가상 클래스 선택자와 가상 요소
+            <h2 class="Chapter">Chapter.10</h2>
+            <fieldset>
+                <legend>
+                    연결 선택자
+                </legend>
+                보통 css에서 tag를 선택하여 style을 부여하면 모든 tag가 선택이 되기에 class나 id를 부여하여 관리한다
+                그러나 이러한 방식도 부여하는 작업이 필요하므로 수가 커질수록 반복작업이 많아진다
+                이럴 때 미리 정해진 몇가지의 방법으로 class나 id를 부여하지 않고도 특정한 tag를 선택하여 관리할 수 있다
+                <ul>
+                    <li>
+                        하위 선택자 : 가장 간단한 방법으로 특정 부모아래의 모든 자식을 선택한다 ex fieldset ul 이 방법으로 이후 fieldset에 속한 리스트의 글자 크기는 18px가 된다
+                    </li>
+                    <li>
+                        자식 선택자 : 하위 선택자와 비슷하지만 특정 부모를 가진 모든 자식을 선택한다 하위 선택자가 부모가 주라면 자식 선택자는 자식이 주이다 ex div > h2 color violet 이것으로 부모가 div인 모든 h2의 글자색은 violet이 된다
+                    </li>
+                    <li>
+                        인접 형제 선택자 : +
+                    </li>
+                    <li>
+                        형제 선택자 : ~
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    속성 선택자
+                </legend>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    가상 클래스 선택자와 가상 요소
+                </legend>
+            </fieldset>
         </div>
     </div>
 </body>
+
 </html>

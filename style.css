@@ -59,6 +59,18 @@ a[class="new"]::after {
     background-color: rgba(228, 77, 77, 0.849);
 }
 
-.Chapter {
+/* .Chapter {
+    color: violet;
+} */
+
+legend {
+    font-size: 20px;
+}
+
+fieldset ul {
+    font-size: 18px;
+}
+
+div > h2 {
     color: violet;
 }
