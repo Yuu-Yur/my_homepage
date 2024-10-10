@@ -9,183 +9,206 @@
 </head>
 
 <body>
-    <h1>
-        Chapter.5 입력 양식 작성하기
-    </h1>
-    <form class="form1">
-        <fieldset class="field1">
-            <legend>
-                폼은 서버와 통신하기 위한 일종의 양식
-            </legend>
-            <div>폼 안에 여러가지를 넣을 수 있음</div>
-            <ul class="ul1">
-                <li>
-                    <label>텍스트로<input class="input1" type="text" placeholder="아이디와"> </label>
-                </li>
-                <li>
-                    <label>비밀번호를 넣어서<input class="input1" type="password" placeholder="로그인 정보를 받을 수도 있고"></label>
-                </li>
-                <li>
-                    <label>인풋 타입 이메일로 <input class="input1" type="email" placeholder="아이디를 이메일로만 받을 수도 있고"></label>
-                </li>
-                <li>
-                    <label>예약같은걸 할때 예약 날짜를 받을 수 있고 <input type="date"> </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox">설문
-                        <input type="checkbox">조사
-                        <input type="checkbox">등등
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="submit" value="다양한 기능을">
-                        <input type="reset" value="가지고 있으므로">
-                    </label>
-                </li>
-                <li>
-                    <label>익숙해 질 필요가 있다.</label>
-                </li>
-            </ul>
-        </fieldset>
-    </form></br></br>
+    <h1>5~9장 미니실습</h1>
+    <div id="grid">
+        <div id="side">
+            <input type="button" value="night mode" onclick="nightDayHandler(this);">
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+                <li><a href="9.html" class="new">5~9장 미니 실습</a> </li>
+            </ol>
+        </div>
+        <div>
+            <fieldset>
+                <h1>
+                    Chapter.5 입력 양식 작성하기
+                </h1>
+                <form class="form1">
+                    <fieldset class="field1">
+                        <legend>
+                            폼은 서버와 통신하기 위한 일종의 양식
+                        </legend>
+                        <div>폼 안에 여러가지를 넣을 수 있음</div>
+                        <ul class="ul1">
+                            <li>
+                                <label>텍스트로<input class="input1" type="text" placeholder="아이디와"> </label>
+                            </li>
+                            <li>
+                                <label>비밀번호를 넣어서<input class="input1" type="password"
+                                        placeholder="로그인 정보를 받을 수도 있고"></label>
+                            </li>
+                            <li>
+                                <label>인풋 타입 이메일로 <input class="input1" type="email"
+                                        placeholder="아이디를 이메일로만 받을 수도 있고"></label>
+                            </li>
+                            <li>
+                                <label>예약같은걸 할때 예약 날짜를 받을 수 있고 <input type="date"> </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">설문
+                                    <input type="checkbox">조사
+                                    <input type="checkbox">등등
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="submit" value="다양한 기능을">
+                                    <input type="reset" value="가지고 있으므로">
+                                </label>
+                            </li>
+                            <li>
+                                <label>익숙해 질 필요가 있다.</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </form>
+            </fieldset>
+
+            <fieldset>
+                <h1>
+                    Chapter.6 CSS 기본
+                </h1>
+                <p style="font-size: 20px;">
+                    태그에 직접 스타일을 작성하는 인라인 방식과
+                </p>
+                <p>
+                    html파일내에 스타일 태그를 작성하는 방법으로
+                </p>
+                <p>
+                    나뉘는데 후자는 여러 페이지를 관리할 때 애로사항이 발생하므로
+                </p>
+                <p>
+                    CSS파일을 따로 만들어서 관리한다
+                </p>
+                <p id="css1">
+                    이때 태그에 id와 class를 붙여서
+                </p>
+                <p class="css2">
+                    관리한다. id와 class없이 태그를 호출하면
+                </p>
+                <p>
+                    변경사항이 생겼을 때 관리가 어려워진다.
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <h1>
+                    Chapter.7 텍스트를 표현하는 스타일
+                </h1>
+                <p class="font1">
+                    font를 바꾸는 방법은 두가지
+                </p>
+                <p class="font1">
+                    하나는 웹 폰트를 불러와서 지정
+                </p>
+                <p>
+                    다른 하나는 직접 폰트파일을 업로드해서 지정하는것이다.
+                </p>
+                <p style="text-align: center;">
+                    추가로 정렬
+                </p>
+                <p style="text-decoration: underline;">
+                    밑줄
+                </p>
+                <p style="text-shadow: 3px -2px 7px red;">
+                    그림자 등의 변경도 가능하다
+                </p>
+                <table>
+                    <caption>
+                        이 캡션은 기본적으로 탑에 위치하지만 바텀으로 내릴 수도 있음
+                    </caption>
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                </table>
+            </fieldset>
 
 
-    <h1>
-        Chapter.6 CSS 기본
-    </h1>
-    <p style="font-size: 20px;">
-        태그에 직접 스타일을 작성하는 인라인 방식과
-    </p>
-    <p>
-        html파일내에 스타일 태그를 작성하는 방법으로
-    </p>
-    <p>
-        나뉘는데 후자는 여러 페이지를 관리할 때 애로사항이 발생하므로
-    </p>
-    <p>
-        CSS파일을 따로 만들어서 관리한다
-    </p>
-    <p id="css1">
-        이때 태그에 id와 class를 붙여서
-    </p>
-    <p class="css2">
-        관리한다. id와 class없이 태그를 호출하면
-    </p>
-    <p>
-        변경사항이 생겼을 때 관리가 어려워진다.
-    </p></br></br>
+            <fieldset>
+                <h1>
+                    Chapter.8 css의 박스 모델
+                </h1>
+                먼저
+                <p>
+                    블록
+                </p>
+                레벨과
+                <span>
+                    인라인
+                </span>
+                레벨을 표현하면 이렇다
+                <p>
+                    블록레벨이란 내용의 길이와 상관없이 width 100%인것처럼 해당 줄을 차지한다.
+                </p>
+                <span>
+                    인라인 레벨이란 내용의 길이만큼의 크기를 차지한다
+                </span>
+                <p style="font-size: 30px; color: red;">
+                    기본적으로 html의 모든 요소는 content, padding, border, margin으로 구성된다.
+                </p>
+                <span class="span2">
+                    컨텐츠는 내용이므로 일단 내용의 크기만큼의 크기이지만
+                </span>
+                <span class="span2">
+                    블록레벨에선 해당 줄 전체만큼의 크기이다
+                </span>
+                <p style="border: 1px gray solid;">
+                    위에서 보이듯 padding은 컨텐츠를 둘러싼 첫 영역으로 서로 다른 content의 padding은 서로를 밀어낸다
+                </p>
+                <div style="border:4px gray dotted; box-sizing: border-box;">
+                    border은 말 그대로 테두리지만 border이 넓어지면 크기를 조정하는데 애로사항이 발생할 수 있다
+                </div>
+                <p style="border: red 5px double; padding: 5px; margin: 5px;">
+                    기본적으론 content 넓이를 기준으로 크기가 변하지만 디자인적으로 필요할 경우 테두리를(padding) 포함한 넓이를 기준으로 할 수 있다
+                </p>
+                <div class="box1">
+                    <p>마지막으로 이 테두리에도 스타일을 가할 수 있다.</p>
+                    <p>테두리의 각도, 그림자, 두께 등등</p>
+                </div>
+                <div style="float: right; font-size: 30px;">
+                    <-float는 해제되기 전까지 다른 요소를 밀어내고 원하는 위치에 존재한다. </div>
+                        <p>
+                            이렇게 블록요소라도 clear 되기 전까진
+                        </p>
+                        <div
+                            style="position: fixed; right: 5px; top: 5px; font-size: 10px; color: green; font-weight: bold;">
+                            포지션픽스로 눈에 띄는 문구나 그림을 고정시킬 수도 있다
+                        </div>
+            </fieldset>
 
-
-    <h1>
-        Chapter.7 텍스트를 표현하는 스타일
-    </h1>
-    <p class="font1">
-        font를 바꾸는 방법은 두가지
-    </p>
-    <p class="font1">
-        하나는 웹 폰트를 불러와서 지정
-    </p>
-    <p>
-        다른 하나는 직접 폰트파일을 업로드해서 지정하는것이다.
-    </p>
-    <p style="text-align: center;">
-        추가로 정렬
-    </p>
-    <p style="text-decoration: underline;">
-        밑줄
-    </p>
-    <p style="text-shadow: 3px -2px 7px red;">
-        그림자 등의 변경도 가능하다
-    </p>
-    <table>
-        <caption>
-            이 캡션은 기본적으로 탑에 위치하지만 바텀으로 내릴 수도 있음
-        </caption>
-        <tr>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-        </tr>
-    </table></br></br>
-
-
-
-    <h1>
-        Chapter.8 css의 박스 모델
-    </h1>
-    먼저
-    <p>
-        블록
-    </p>
-    레벨과
-    <span>
-        인라인
-    </span>
-    레벨을 표현하면 이렇다
-    <p>
-        블록레벨이란 내용의 길이와 상관없이 width 100%인것처럼 해당 줄을 차지한다.
-    </p>
-    <span>
-        인라인 레벨이란 내용의 길이만큼의 크기를 차지한다
-    </span>
-    <p style="font-size: 30px; color: red;">
-        기본적으로 html의 모든 요소는 content, padding, border, margin으로 구성된다.
-    </p>
-    <span class="span2">
-        컨텐츠는 내용이므로 일단 내용의 크기만큼의 크기이지만
-    </span>
-    <span class="span2">
-        블록레벨에선 해당 줄 전체만큼의 크기이다
-    </span>
-    <p style="border: 1px gray solid;">
-        위에서 보이듯 padding은 컨텐츠를 둘러싼 첫 영역으로 서로 다른 content의 padding은 서로를 밀어낸다
-    </p>
-    <div style="border:4px gray dotted; box-sizing: border-box;">
-        border은 말 그대로 테두리지만 border이 넓어지면 크기를 조정하는데 애로사항이 발생할 수 있다
+            <fieldset>
+                <h1>
+                    Chapter.9 이미지와 그라데이션
+                </h1>
+                <div class="c9">
+                    <p>
+                        백그라운드를 설정하고 그라데이션으로 설정해보기
+                    </p>
+                    <p>
+                        백그라운드는 사진으로 설정할 수도 단순한 색으로 설정할 수도 있다.
+                    </p>
+                    <p>
+                        방향지정, 시작지점 중간점 종점 설정
+                    </p>
+                </div>
+                <div class="c9-2">
+                    <p>
+                        또 이런식으로 그라데이션의 시작점과 종점을 같게하면 부드러운 반복효과도 줄 수 있다.
+                    </p>
+                </div>
+            </fieldset>
+        </div>
     </div>
-    <p style="border: red 5px double; padding: 5px; margin: 5px;">
-        기본적으론 content 넓이를 기준으로 크기가 변하지만 디자인적으로 필요할 경우 테두리를(padding) 포함한 넓이를 기준으로 할 수 있다
-    </p>
-    <div class="box1">
-        <p>마지막으로 이 테두리에도 스타일을 가할 수 있다.</p>
-        <p>테두리의 각도, 그림자, 두께 등등</p>
-    </div>
-    <div style="float: right; font-size: 30px;">
-        <-float는 해제되기 전까지 다른 요소를 밀어내고 원하는 위치에 존재한다. </div>
-            <p>
-                이렇게 블록요소라도 clear 되기 전까진
-            </p>
-            <div style="position: fixed; right: 5px; top: 5px; font-size: 10px; color: green; font-weight: bold;">
-                포지션픽스로 눈에 띄는 문구나 그림을 고정시킬 수도 있다
-            </div></br></br>
-
-
-            <h1>
-                Chapter.9 이미지와 그라데이션
-            </h1>
-            <div class="c9">
-                <p>
-                    백그라운드를 설정하고 그라데이션으로 설정해보기
-                </p>
-                <p>
-                    백그라운드는 사진으로 설정할 수도 단순한 색으로 설정할 수도 있다.
-                </p>
-                <p>
-                    방향지정, 시작지점 중간점 종점 설정
-                </p>
-            </div>
-            <div class="c9-2">
-                <p>
-                    또 이런식으로 그라데이션의 시작점과 종점을 같게하면 부드러운 반복효과도 줄 수 있다.
-                </p>
-            </div>
 </body>
 
 </html>
