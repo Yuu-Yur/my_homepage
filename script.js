@@ -30,3 +30,15 @@ function nightDayHandler(self) {
     setColor('blue');
 }
 }
+
+
+function setside() {
+    document.write(' <ol id="menu"> ')
+    document.write('<li><a href="1.html">HTML</a></li>')
+    document.write('<li><a href="2.html">CSS</a></li>')
+    document.write('<li><a href="3.html">JavaScript</a></li>')
+    document.write('<li><a href="9.html" class="new">5~9장</a> </li>')
+    document.write('<li><a href="10.html" class="new">10~12장</a></li>')
+    document.write('<li><a href="11.html" class="new">13장</a></li>')
+    document.write(' </ol>')
+    }
