@@ -174,12 +174,62 @@ input[type=radio] {
 #move {
     width: 200px;
     height: 200px;
-    background-color: chartreuse;
+    background: linear-gradient(135deg, yellow , chartreuse, yellow);
     border: 3px black solid;
     position: absolute;
     right: 300px;
-    top: 1610px;
+    top: 1630px;
 }
+
+#move2 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, yellow , chartreuse, yellow);
+    border: 3px black solid;
+    position: absolute;
+    right: 300px;
+    top: 1910px;
+    transition: all 1s ease-out 0.3s;
+}
+
+#move3 {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, yellow , chartreuse, yellow);
+    border: 3px black solid;
+    position: absolute;
+    right: 300px;
+    top: 2220px;
+    /* animation: translate 5s infinite; */
+}
+
+@keyframes translate {
+    from{
+        transform: translateX(0) rotate3d(1,1,0,0deg) scale(1,1);
+    }
+    25%{
+        transform: translateX(200px) rotate3d(1,-1,0,60deg) scale(0.5,1.5);
+    }
+    50%{
+        transform: translateY(100px) rotate3d(1,1,0,0deg) scale(1,1);
+    }
+    75%{
+        transform: translateX(-200px) rotate3d(-1,1,0,60deg) scale(1.5,0.5);
+    }
+    to{
+        transform: translateX(0) rotate3d(1,1,0,0deg) scale(1,1);
+    }
+}
+
+li .hover{
+   margin-right: 10px;
+   padding: 0 10px;
+   background-color: greenyellow;
+   border: 1px solid green;
+}
+
+
+
 
 
 /* 점심메뉴 실습 */

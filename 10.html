@@ -89,13 +89,17 @@
                     특정한 상황에 맞추어 스타일을 변경할 수 있다
                 </p>
                 <ul id="test10">
-                    <a href="dummy.html"><li>
-                        :link 방문한 기록이 없는 링크 ul a:link {color:blue;}
-                    </li></a>
-                    <a href="dummy2.html"><li>
+                    <a href="dummy.html">
+                        <li>
+                            :link 방문한 기록이 없는 링크 ul a:link {color:blue;}
+                        </li>
+                    </a>
+                    <a href="dummy2.html">
+                        <li>
 
-                        :visited 방문한 기록이 있는 링크 ul a:visited {color:red;}
-                    </li></a>
+                            :visited 방문한 기록이 있는 링크 ul a:visited {color:red;}
+                        </li>
+                    </a>
                     <li>
                         :active 요소가 활성화 되었을 때 ex #activetest:active {width: 600px;}
                     </li>
@@ -104,18 +108,25 @@
                         :hover 요소 위에 마우스를 올렸을 때 ex #hovertest:hover {width:600px;}
                     </li>
                     <input type="button" value=":hover" id="hovertest">
-                    <a href="#activetest"><li> 
-                        :target 링크와 같이 써야 하며 active하면 ex #activetest:target{background : red;}
-                    </li></a>
-                    <a href="#hovertest"><li> 
-                        :target  가리키는 대상의 스타일을 변화시킨다 ex #hovertest:target{background : blue;}
-                    </li></a>
+                    <a href="#activetest">
+                        <li>
+                            :target 링크와 같이 써야 하며 active하면 ex #activetest:target{background : red;}
+                        </li>
+                    </a>
+                    <a href="#hovertest">
+                        <li>
+                            :target 가리키는 대상의 스타일을 변화시킨다 ex #hovertest:target{background : blue;}
+                        </li>
+                    </a>
                     <li>
-                        :enabled, :disabled 해당 대상이 enabled나 disabled일때 스타일을 변화시킨다 ex .abledtest:enabled,disabled {background: red,blue;}
+                        :enabled, :disabled 해당 대상이 enabled나 disabled일때 스타일을 변화시킨다 ex .abledtest:enabled,disabled
+                        {background: red,blue;}
                     </li>
-                    <input type="button" value="enable" class="abledtest" style="width:600px"> <input type="button" value="disabled" class="abledtest" disabled style="width:600px">
+                    <input type="button" value="enable" class="abledtest" style="width:600px"> <input type="button"
+                        value="disabled" class="abledtest" disabled style="width:600px">
                     <li>
-                        :checked 해당 대상이 라디오나 체크 일때 체크했을 경우 스타일을 변화 ex #checkedtest:checked + label {background : black;color : white;}
+                        :checked 해당 대상이 라디오나 체크 일때 체크했을 경우 스타일을 변화 ex #checkedtest:checked + label {background :
+                        black;color : white;}
                     </li>
                     <input type="checkbox" name="test" id="checkedtest"><label for="checkedtest">checkedtest</label>
                     <li>
@@ -131,7 +142,8 @@
                         임의의 부모 아래에서 임의의 자식이 하나뿐일때 선택, 여러 자식중 첫번째, 여러 자식중 마지막, 여러 자식중 n번째, 여러 자식중 마지막에서 n번째
                     </li>
                     <li>
-                        또 :앞에 tag를 붙인 다음 child를 of type로 바꾸면 임의의 부모를 가진 해당 tag 중에서 각각이 선택된다 예외로 only child만 only type of 로 변환
+                        또 :앞에 tag를 붙인 다음 child를 of type로 바꾸면 임의의 부모를 가진 해당 tag 중에서 각각이 선택된다 예외로 only child만 only type of
+                        로 변환
                     </li>
                     <li>
                         ex #test10 li:last-of-type{font-weight: bold;}
@@ -149,24 +161,30 @@
                 <p>
                     2차원 변형과 3차원 변형으로 나뉨
                 </p>
-                <ul style="perspective: 200px;">
+                <p>
+                    마우스를 올려 변형
+                </p>
+                <ul>
                     <li>
-                        <a href="#move" onmousedown="translate3d(200,0,0)" onmouseup="reset()">translateX</a>
-                        <a href="#move" onmousedown="translate3d(0,200,0)" onmouseup="reset()">translateY</a>
-                        <a href="#move" onmousedown="translate3d(0,0,200)" onmouseup="reset()">translateZ(2차원이라 움직이지 않음)</a>
+                        <span class="hover" onmouseover="translate3d(200,0,0)" onmouseout="reset()">translateX</span>
+                        <span class="hover" onmouseover="translate3d(0,200,0)" onmouseout="reset()">translateY</span>
+                        <span class="hover" onmouseover="translate3d(0,0,200)" onmouseout="reset()">translateZ(2차원이라 움직이지 않음)</span>
                     </li>
                     <li>
-                        <a href="#move" onmousedown="scale3d(2,1,1)" onmouseup="reset()">scaleX</a>
-                        <a href="#move" onmousedown="scale3d(1,2,1)" onmouseup="reset()">scaleY</a>
-                        <a href="#move" onmousedown="scale3d(1,1,2)" onmouseup="reset()">scaleZ(2차원이라 움직이지 않음)</a>
+                        <span class="hover" onmouseover="scale3d(2,1,1)" onmouseout="reset()">scaleX</span>
+                        <span class="hover" onmouseover="scale3d(1,2,1)" onmouseout="reset()">scaleY</span>
+                        <span class="hover" onmouseover="scale3d(1,1,2)" onmouseout="reset()">scaleZ(2차원이라 움직이지 않음)</span>
                     </li>
                     <li>
-                        <a href="#move" onmousedown="rotate3d(2,1,1)" onmouseup="reset()">rotateX</a>
-                        <a href="#move" onmousedown="rotate3d(1,2,1)" onmouseup="reset()">rotateY</a>
-                        <a href="#move" onmousedown="rotate3d(1,1,2)" onmouseup="reset()">rotateZ(2차원이라 움직이지 않음)</a>
+                        <span class="hover" onmouseover="rotate3d(1,0,0,40)" onmouseout="reset()">rotateX</span>
+                        <span class="hover" onmouseover="rotate3d(0,1,0,40)" onmouseout="reset()">rotateY</span>
+                        <span class="hover" onmouseover="rotate3d(0,0,1,40)" onmouseout="reset()">rotateZ</span>
+                        <span class="hover" onmouseover="rotate3d(1,1,1,80)" onmouseout="reset()">rotate3d</span>
                     </li>
                     <li>
-                        skew
+                        <span class="hover" onmouseover="skew(20,0)" onmouseout="reset()">skewX</span>
+                        <span class="hover" onmouseover="skew(0,20)" onmouseout="reset()">skewY</span>
+                        <span class="hover" onmouseover="skew(30,-20)" onmouseout="reset()">skew</span>
                     </li>
                 </ul>
                 <div id="move"></div>
@@ -175,11 +193,69 @@
                 <legend>
                     트랜지션
                 </legend>
+                <p>
+                    트랜지션은 변형의 과정에 관여하는 스타일이다
+                </p>
+                <p>
+                    시간, 타이밍, 속도, 속성 등을 설정할 수 있다
+                </p>
+                <p>
+                    아래는 같은 변형에 트랜지션을 적용한 것이다
+                </p>
+                <p>
+                    transition: all 1s ease-out 0.3s;
+                </p>
+                <ul>
+                    <li>
+                        <span class="hover" onmouseover="translate3d2(200,0,0)" onmouseout="reset2()">translateX</span>
+                        <span class="hover" onmouseover="translate3d2(0,200,0)" onmouseout="reset2()">translateY</span>
+                        <span class="hover" onmouseover="translate3d2(0,0,200)" onmouseout="reset2()">translateZ(2차원이라 움직이지
+                            않음)</span>
+                    </li>
+                    <li>
+                        <span class="hover" onmouseover="scale3d2(2,1,1)" onmouseout="reset2()">scaleX</span>
+                        <span class="hover" onmouseover="scale3d2(1,2,1)" onmouseout="reset2()">scaleY</span>
+                        <span class="hover" onmouseover="scale3d2(1,1,2)" onmouseout="reset2()">scaleZ(2차원이라 움직이지 않음)</span>
+                    </li>
+                    <li>
+                        <span class="hover" onmouseover="rotate3d2(1,0,0,40)" onmouseout="reset2()">rotateX</span>
+                        <span class="hover" onmouseover="rotate3d2(0,1,0,40)" onmouseout="reset2()">rotateY</span>
+                        <span class="hover" onmouseover="rotate3d2(0,0,1,40)" onmouseout="reset2()">rotateZ</span>
+                        <span class="hover" onmouseover="rotate3d2(1,1,1,80)" onmouseout="reset2()">rotate3d</span>
+                    </li>
+                    <li>
+                        <span class="hover" onmouseover="skew2(20,0)" onmouseout="reset2()">skewX</span>
+                        <span class="hover" onmouseover="skew2(0,20)" onmouseout="reset2()">skewY</span>
+                        <span class="hover" onmouseover="skew2(30,-20)" onmouseout="reset2()">skew</span>
+                    </li>
+                </ul>
+                <div id="move2"></div>
             </fieldset>
             <fieldset>
                 <legend>
                     애니메이션
                 </legend>
+                <p>
+                    시작과 끝, 그리고 변화점을 지정하여 animation 속성의 값으로 취급한다
+                </p>
+                <ul>
+                    <li>
+                        @keyframes rotate 로 이름을 지정, animation: rotate로 사용
+                    </li>
+                    <li>
+                        @keyframes 은 여러개를 사용할 수 있다, animation: rotate, background
+                    </li>
+                    <li>
+                        여기에 각 애니메이션의 진행시간이나 반복등을 지정할 수 있다
+                    </li>
+                    <li>
+                        <span class="hover" onmouseover="animation()">마우스를 올려 애니메이션 시작</span>
+                    </li>
+                    <li>
+                        <span class="hover" onmouseover="animationStop()">마우스를 올려 애니메이션 중지</span>
+                    </li>
+                </ul>
+                <div id="move3"></div>
             </fieldset>
             <h2 class="Chapter">Chapter.12</h2>
             <fieldset>
