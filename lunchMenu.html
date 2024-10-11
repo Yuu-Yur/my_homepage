@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1><a href="index.html">Yuu's Homepage</a></h1>
+    <div id="grid">
+        <div id="side">
+            <input type="button" value="night mode" onclick="nightDayHandler(this);">
+            <script>setside()</script>
+        </div>
+        <div style="padding-left: 10px;">
+            <h2 class="Chapter">제일 좋아하는 점심 메뉴!</h2>
+            <ul id="lunchList">
+                <li>
+                    <a href="#" onclick="changeImage('pasta', '8400krw')">Pasta</a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeImage('salad', '6400krw')">Salad</a>
+                </li>
+                <li>
+                    <a href="#" onclick="changeImage('pizza', '26000krw')">Pizza</a>
+                </li>
+            </ul>
+            <div id="lunchMenuDisplay">
+            </div>
+        </div>
+</body>
+
+</html>
