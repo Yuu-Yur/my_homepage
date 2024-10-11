@@ -6,23 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5~9</title>
     <link rel="stylesheet" href="9.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
     <h1><a href="index.html">Yuu's Homepage</a></h1>
     <div id="grid">
         <div id="side">
-            <ol id="menu">
-                <li><a href="1.html">HTML</a></li>
-                <li><a href="2.html">CSS</a></li>
-                <li><a href="3.html">JavaScript</a></li>
-                <li><a href="9.html" class="new">5~9장</a> </li>
-                <li><a href="10.html" class="new">10~12장</a></li>
-                <li><a href="11.html" class="new">13장</a></li>
-            </ol>
+            <input type="button" value="night mode" onclick="nightDayHandler(this);">
+            <script>setside()</script>
         </div>
         <div>
-            <h1>5~9장 미니실습</h1>
             <fieldset>
                 <h2>
                     Chapter.5 입력 양식 작성하기

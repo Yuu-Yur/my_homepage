@@ -27,7 +27,7 @@ ol {
 
 #grid {
     display: grid;
-    grid-template-columns: 1fr 9fr;
+    grid-template-columns: 200px auto;
     border-bottom: 1px gray solid;
 }
 
