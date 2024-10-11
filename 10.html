@@ -149,17 +149,21 @@
                 <p>
                     2차원 변형과 3차원 변형으로 나뉨
                 </p>
-                <ul>
+                <ul style="perspective: 200px;">
                     <li>
-                        <a href="#move" onmousedown="moveX()" onmouseup="reset()">translateX</a>
-                        <a href="#move" onmousedown="moveY()" onmouseup="reset()">translateY</a>
-                        <a href="#move" onmousedown="moveZ()" onmouseup="reset()">translateZ(2차원이라 움직이지 않음)</a>
+                        <a href="#move" onmousedown="translate3d(200,0,0)" onmouseup="reset()">translateX</a>
+                        <a href="#move" onmousedown="translate3d(0,200,0)" onmouseup="reset()">translateY</a>
+                        <a href="#move" onmousedown="translate3d(0,0,200)" onmouseup="reset()">translateZ(2차원이라 움직이지 않음)</a>
                     </li>
                     <li>
-                        scale
+                        <a href="#move" onmousedown="scale3d(2,1,1)" onmouseup="reset()">scaleX</a>
+                        <a href="#move" onmousedown="scale3d(1,2,1)" onmouseup="reset()">scaleY</a>
+                        <a href="#move" onmousedown="scale3d(1,1,2)" onmouseup="reset()">scaleZ(2차원이라 움직이지 않음)</a>
                     </li>
                     <li>
-                        rotate
+                        <a href="#move" onmousedown="rotate3d(2,1,1)" onmouseup="reset()">rotateX</a>
+                        <a href="#move" onmousedown="rotate3d(1,2,1)" onmouseup="reset()">rotateY</a>
+                        <a href="#move" onmousedown="rotate3d(1,1,2)" onmouseup="reset()">rotateZ(2차원이라 움직이지 않음)</a>
                     </li>
                     <li>
                         skew

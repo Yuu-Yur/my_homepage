@@ -7,8 +7,8 @@ h1 {
 }
 
 li input {
-    width : 100%;
-    padding : 10px 0%;
+    width: 100%;
+    padding: 10px 0%;
 }
 
 a {
@@ -31,16 +31,18 @@ ol {
     border-bottom: 1px gray solid;
 }
 
-@media(max-width:800px){
+@media(max-width:800px) {
     #grid {
-        display:block;
+        display: block;
     }
+
     #side {
         border-right: none;
     }
+
     ol {
         border-right: none;
-        display:block;
+        display: block;
         border-bottom: 1px gray solid;
     }
 }
@@ -75,36 +77,36 @@ fieldset ul {
     font-size: 18px;
 }
 
-div > h2 {
+div>h2 {
     color: violet;
 }
 
-legend + p {
+legend+p {
     font-weight: bold;
 }
 
-legend ~ p {
+legend~p {
     font-style: italic;
 }
 
 li[title] {
-    color: crimson 
+    color: crimson
 }
 
 [title=att2] {
-    font-weight : bold;
+    font-weight: bold;
 }
 
 [title|=att4] {
-    font-style : italic;
+    font-style: italic;
 }
 
-[title^=at]  {
-    background : yellow;
+[title^=at] {
+    background: yellow;
 }
 
 [title$=t6] {
-    text-align : center;
+    text-align: center;
 }
 
 [title*=tt] {
@@ -116,7 +118,7 @@ ul a:link {
 }
 
 ul a:visited {
-    color:red;
+    color: red;
 }
 
 #activetest {
@@ -128,19 +130,19 @@ ul a:visited {
 }
 
 #hovertest {
-    width:300px;
+    width: 300px;
 }
 
 #hovertest:hover {
-    width:600px;
+    width: 600px;
 }
 
-#activetest:target{
-    background : red;
+#activetest:target {
+    background: red;
 }
 
-#hovertest:target{
-    background : blue;
+#hovertest:target {
+    background: blue;
 }
 
 .abledtest:enabled {
@@ -152,20 +154,20 @@ ul a:visited {
     color: white;
 }
 
-#checkedtest:checked + label {
-    background : black;
-    color : white;
+#checkedtest:checked+label {
+    background: black;
+    color: white;
 }
 
-ul input[type=radio]:not([name=nott2]) + label {
-    background : black
+ul input[type=radio]:not([name=nott2])+label {
+    background: black
 }
 
 input[type=radio] {
     margin: 20px;
 }
 
-#test10 li:last-of-type{
+#test10 li:last-of-type {
     font-weight: bold;
 }
 
@@ -189,7 +191,7 @@ input[type=radio] {
     padding-left: 0;
 }
 
-#lunchList > li {
+#lunchList>li {
     margin: 10px;
     padding: 10px;
     font-size: 30px;
@@ -200,7 +202,7 @@ input[type=radio] {
     background-color: crimson;
 }
 
-#lunchList > li > a {
+#lunchList>li>a {
     color: white;
 }
 
@@ -211,4 +213,9 @@ input[type=radio] {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px -1px black, 1px 1px black, -1px 1px black, -1px -1px black;
 }

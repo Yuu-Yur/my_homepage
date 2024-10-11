@@ -44,37 +44,34 @@ function setside() {
     document.write(' </ol>')
 }
 
-function moveX() {
+function translate3d(a, b, c) {
     // 대상 요소 선택
     let target = document.getElementById("move");
 
-    // X로 200픽셀만큼
-    target.style.transform = "translateX(200px)";
-  }
+    // 지정받은 방향으로 200픽셀만큼
+    target.style.transform = `translate3d(${a}px, ${b}px, ${c}px)`;
+}
 
-  function moveY() {
+function scale3d(a, b, c) {
     // 대상 요소 선택
     let target = document.getElementById("move");
 
-    // Y로 200픽셀만큼
-    target.style.transform = "translateY(200px)";
-  }
+    // 지정받은 방향으로 200픽셀만큼
+    target.style.transform = `scale3d(${a}, ${b}, ${c})`;
+}
 
-  function moveZ() {
+function rotate3d(a, b, c, d) {
     // 대상 요소 선택
     let target = document.getElementById("move");
 
-    // Z로 200픽셀만큼
-    target.style.transform = "translateZ(200px)";
-  }
+    // 지정받은 방향으로 200픽셀만큼
+    target.style.transform = `rotate3d(${a}, ${b}, ${c}, ${d})`;
+}
 
 function reset() {
     var target = document.getElementById("move");
-    target.style.transform = "translate(0)";
     target.style.transform = "translate3d(0)";
-    target.style.transform = "scale(0)";
     target.style.transform = "scale3d(0)";
-    target.style.transform = "rotate(0)";
     target.style.transform = "rotate3d(0)";
     target.style.transform = "skew(0)";
 }
@@ -89,15 +86,11 @@ function changeImage(imageName) {
     image.style.backgroundRepeat = "no-repeat";
     image.style.backgroundSize = "contain";
     image.style.backgroundPosition = "center";
-    image.style.fontSize = "30px";
-    image.style.color = "white";
-    image.style.fontWeight = "bold";
-    image.style.textTransform = "uppercase";
-    if(imageName=='pasta') {
-    image.innerHTML = "파스타<br>8400원";
-    } else if(imageName=='salad') {
-    image.innerHTML = "샐러드<br>6400원";
+    if(imageName=='서면 롤링파스타') {
+    image.innerHTML = "서면 롤링파스타<br>부산광역시 부산진구 서전로 10번길 60<br>추천메뉴 : 바질 페스토 크림 파스타 8900원";
+    } else if(imageName=='장모족발') {
+    image.innerHTML = "장모족발 서면점<br>부산광역시 부산진구 동천로 132번길 6<br>추천메뉴 : 매일삶는장모왕족 앞다리 소 24000원";
     } else { 
-        image.innerHTML = "피자<br> 25900원"
+        image.innerHTML = "해피통닭<br>부산광역시 부산진구 중앙대로680번가길 70<br>추천메뉴 : 후반/양념반 22900원"
     }
 }
