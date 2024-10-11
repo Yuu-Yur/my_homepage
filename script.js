@@ -48,8 +48,24 @@ function moveX() {
     // 대상 요소 선택
     let target = document.getElementById("move");
 
-    // 애니메이션 클래스 추가
+    // X로 200픽셀만큼
     target.style.transform = "translateX(200px)";
+  }
+
+  function moveY() {
+    // 대상 요소 선택
+    let target = document.getElementById("move");
+
+    // Y로 200픽셀만큼
+    target.style.transform = "translateY(200px)";
+  }
+
+  function moveZ() {
+    // 대상 요소 선택
+    let target = document.getElementById("move");
+
+    // Z로 200픽셀만큼
+    target.style.transform = "translateZ(200px)";
   }
 
 function reset() {
@@ -63,16 +79,25 @@ function reset() {
     target.style.transform = "skew(0)";
 }
 
+
+
+
 // 점심 메뉴 실습
-function changeImage(imageName, price) {
+function changeImage(imageName) {
     var image = document.getElementById("lunchMenuDisplay");
     image.style.background = `url('${imageName}.jpg')`;
     image.style.backgroundRepeat = "no-repeat";
     image.style.backgroundSize = "contain";
     image.style.backgroundPosition = "center";
-    image.innerHTML = imageName + "<br>" + price;
     image.style.fontSize = "30px";
     image.style.color = "white";
     image.style.fontWeight = "bold";
     image.style.textTransform = "uppercase";
+    if(imageName=='pasta') {
+    image.innerHTML = "파스타<br>8400원";
+    } else if(imageName=='salad') {
+    image.innerHTML = "샐러드<br>6400원";
+    } else { 
+        image.innerHTML = "피자<br> 25900원"
+    }
 }
