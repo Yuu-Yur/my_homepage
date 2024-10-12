@@ -259,8 +259,37 @@ li .hover {
     grid-template-columns: repeat(auto-fit, minmax(320px, 50%));
 }
 
+#gridEx {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    "box1 box1 box1 ."
+    "box2 . box3 box3"
+    "box2 . box3 box3"
+    ". box4 box4 box4" ;
+}
 
+.box {
+    border: 1px solid black;
+}
 
+.box1 {
+    background-color: azure;
+    grid-area: box1;
+}
+.box2 {
+    background-color: aliceblue;
+    grid-area: box2;
+}
+.box3 {
+    background-color: bisque;
+    grid-area: box3;
+}
+.box4 {
+    background-color: cornsilk;
+    grid-area: box4;
+}
 
 
 
