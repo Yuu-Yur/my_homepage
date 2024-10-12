@@ -171,62 +171,95 @@ input[type=radio] {
     font-weight: bold;
 }
 
+.ch11 ul {
+    display: inline-block;
+}
+
 #move {
     width: 200px;
     height: 200px;
-    background: linear-gradient(135deg, yellow , chartreuse, yellow);
+    background: linear-gradient(135deg, yellow, chartreuse, yellow);
     border: 3px black solid;
-    position: absolute;
-    right: 300px;
-    top: 1630px;
+    float: right;
 }
 
 #move2 {
     width: 200px;
     height: 200px;
-    background: linear-gradient(135deg, yellow , chartreuse, yellow);
+    background: linear-gradient(135deg, yellow, chartreuse, yellow);
     border: 3px black solid;
-    position: absolute;
-    right: 300px;
-    top: 1910px;
+    float: right;
     transition: all 1s ease-out 0.3s;
 }
 
 #move3 {
     width: 100px;
     height: 100px;
-    background: linear-gradient(135deg, yellow , chartreuse, yellow);
+    background: linear-gradient(135deg, yellow, chartreuse, yellow);
     border: 3px black solid;
-    position: absolute;
-    right: 300px;
-    top: 2220px;
-    /* animation: translate 5s infinite; */
+    float: right;
 }
 
 @keyframes translate {
-    from{
-        transform: translateX(0) rotate3d(1,1,0,0deg) scale(1,1);
+    from {
+        transform: translateX(0) rotate3d(1, 1, 0, 0deg) scale(1, 1);
     }
-    25%{
-        transform: translateX(200px) rotate3d(1,-1,0,60deg) scale(0.5,1.5);
+
+    25% {
+        transform: translateX(-200px) rotate3d(1, -1, 0, 60deg) scale(0.5, 1.5);
     }
-    50%{
-        transform: translateY(100px) rotate3d(1,1,0,0deg) scale(1,1);
+
+    50% {
+        transform: translateY(100px) rotate3d(1, 1, 0, 0deg) scale(1, 1);
     }
-    75%{
-        transform: translateX(-200px) rotate3d(-1,1,0,60deg) scale(1.5,0.5);
+
+    75% {
+        transform: translate(-100px, -100px) rotate3d(-1, 1, 0, 60deg) scale(1.5, 0.5);
     }
-    to{
-        transform: translateX(0) rotate3d(1,1,0,0deg) scale(1,1);
+
+    to {
+        transform: translateX(0) rotate3d(1, 1, 0, 0deg) scale(1, 1);
     }
 }
 
-li .hover{
-   margin-right: 10px;
-   padding: 0 10px;
-   background-color: greenyellow;
-   border: 1px solid green;
+li .hover {
+    margin-right: 10px;
+    padding: 0 10px;
+    background-color: greenyellow;
+    border: 1px solid green;
 }
+
+
+/* 12장 실습 */
+@media screen and (min-width: 1800px) {
+    .chapterdiv {
+        width: 49%;
+        border: 1px solid black;
+        margin: 5px;
+    }
+
+    .chapter~fieldset {
+        margin: 5px;
+    }
+    #gridShow > fieldset {
+        margin: 5px;
+    }
+
+    #flex1800 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .chapterdiv .chapter {
+        margin-left: 5px;
+    }
+}
+
+#gridShow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 50%));
+}
+
+
 
 
 

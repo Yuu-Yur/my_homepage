@@ -16,273 +16,369 @@
             <input type="button" value="night mode" onclick="nightDayHandler(this);">
             <script>setside()</script>
         </div>
-        <div style="padding-left: 10px;">
-            <h2 class="Chapter">Chapter.10</h2>
-            <fieldset>
-                <legend>
-                    연결 선택자
-                </legend>
-                <p>보통 css에서 tag를 선택하여 style을 부여하면 모든 tag가 선택이 되기에 class나 id를 부여하여 관리한다</p>
-                <p>그러나 이러한 방식도 부여하는 작업이 필요하므로 수가 커질수록 반복작업이 많아진다</p>
-                <p>이럴 때 미리 정해진 몇가지의 방법으로 class나 id를 부여하지 않고도 특정한 tag를 선택하여 관리할 수 있다</p>
-                <ul>
-                    <li>
-                        하위 선택자 : 가장 간단한 방법으로 특정 부모아래의 모든 자식을 선택한다 ex fieldset ul font size : 18px;
-                    </li>
-                    <li>
-                        자식 선택자 : 하위 선택자와 비슷하지만 특정 부모를 가진 모든 자식을 선택한다 하위 선택자가 부모가 주라면 자식 선택자는 자식이 주이다 ex div > h2 color
-                        violet 이것으로 부모가 div인 모든 h2의 글자색은 violet이 된다
-                    </li>
-                    <li>
-                        인접 형제 선택자 : 형제 중 가장 첫번째를 선택한다 ex legend + p fontweight bold 이것으로 legend의 형제중 첫번째 p가 bold가 된다
-                    </li>
-                    <li>
-                        형제 선택자 : 형제 모두를 선택한다 ex legend ~ p fontstyle italic 이것으로 legend의 형제인 p 모두가 italic이 된다
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend>
-                    속성 선택자
-                </legend>
-                <p>
-                    연결 선택자는 tag를 의존하여 tag를 선택한다면 속성 선택자는 속성을 의존하여 tag를 선택한다
-                </p>
-                <p>
+        <div id="flex1800" style="padding-left: 10px;">
+            <div class="chapterdiv">
+                <h2 class="chapter">Chapter.10</h2>
+                <fieldset>
+                    <legend>
+                        연결 선택자
+                    </legend>
+                    <p>보통 css에서 tag를 선택하여 style을 부여하면 모든 tag가 선택이 되기에 class나 id를 부여하여 관리한다</p>
+                    <p>그러나 이러한 방식도 부여하는 작업이 필요하므로 수가 커질수록 반복작업이 많아진다</p>
+                    <p>이럴 때 미리 정해진 몇가지의 방법으로 class나 id를 부여하지 않고도 특정한 tag를 선택하여 관리할 수 있다</p>
+                    <ul>
+                        <li>
+                            하위 선택자 : 가장 간단한 방법으로 특정 부모아래의 모든 자식을 선택한다 ex fieldset ul font size : 18px;
+                        </li>
+                        <li>
+                            자식 선택자 : 하위 선택자와 비슷하지만 특정 부모를 가진 모든 자식을 선택한다 하위 선택자가 부모가 주라면 자식 선택자는 자식이 주이다 ex div > h2
+                            color
+                            violet 이것으로 부모가 div인 모든 h2의 글자색은 violet이 된다
+                        </li>
+                        <li>
+                            인접 형제 선택자 : 형제 중 가장 첫번째를 선택한다 ex legend + p fontweight bold 이것으로 legend의 형제중 첫번째 p가 bold가 된다
+                        </li>
+                        <li>
+                            형제 선택자 : 형제 모두를 선택한다 ex legend ~ p fontstyle italic 이것으로 legend의 형제인 p 모두가 italic이 된다
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        속성 선택자
+                    </legend>
+                    <p>
+                        연결 선택자는 tag를 의존하여 tag를 선택한다면 속성 선택자는 속성을 의존하여 tag를 선택한다
+                    </p>
+                    <p>
 
-                </p>
-                <p>
-                    예를 위해 이 리스트에는 모두 att숫자 의 title을 붙였다
-                </p>
-                <ul>
-                    <li title="att1">
-                        속성 선택자 []안에 원하는 속성을 넣어 선택할 수 있다 []앞에 태그를 지정할 수도 있다 ex li[title] color : crimson;
-                    </li>
-                    <li title="att2">
-                        속성 안의 값도 지정하여 선택할 수 있다 일치는 []안에 속성과 값을 =로 붙인다 ex [title=att1] fontweight : bold;
-                    </li>
-                    <li title="att3">
-                        속성 안에 여러 값이 있을 때에도 특정 속성과 일치하는 값이 있다면 선택할 수 있다 ex [class~=a] fontsize :100px;
-                    </li>
-                    <li title="att4-test">
-                        일치와 비슷하지만 -이 붙어있는 것 까지 선택하는 특수한 경우에 사용 ex [title|=att4] fontstyle : italic;
-                    </li>
-                    <li title="att5">
-                        특정 값으로 시작하는 속성을 가진 tag 선택 가능 ex [title^=at] background : yellow;
-                    </li>
-                    <li title="att6">
-                        특정 값으로 끝나는 속성을 가진 tag 선택 가능 ex [title$=t6] textalign="center";
-                    </li>
-                    <li title="att7">
-                        일부가 일치 하는 값을 가진 속성의 tag 선택 가능 ex [title*=tt] text-shadow: 2px 1px rebeccapurple;
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend>
-                    가상 클래스 선택자와 가상 요소
-                </legend>
-                <p>
-                    사용자의 동작에 반응 하는 가상 클래스로서
-                </p>
-                <p>
-                    특정한 상황에 맞추어 스타일을 변경할 수 있다
-                </p>
-                <ul id="test10">
-                    <a href="dummy.html">
-                        <li>
-                            :link 방문한 기록이 없는 링크 ul a:link {color:blue;}
+                    </p>
+                    <p>
+                        예를 위해 이 리스트에는 모두 att숫자 의 title을 붙였다
+                    </p>
+                    <ul>
+                        <li title="att1">
+                            속성 선택자 []안에 원하는 속성을 넣어 선택할 수 있다 []앞에 태그를 지정할 수도 있다 ex li[title] color : crimson;
                         </li>
-                    </a>
-                    <a href="dummy2.html">
-                        <li>
+                        <li title="att2">
+                            속성 안의 값도 지정하여 선택할 수 있다 일치는 []안에 속성과 값을 =로 붙인다 ex [title=att1] fontweight : bold;
+                        </li>
+                        <li title="att3">
+                            속성 안에 여러 값이 있을 때에도 특정 속성과 일치하는 값이 있다면 선택할 수 있다 ex [class~=a] fontsize :100px;
+                        </li>
+                        <li title="att4-test">
+                            일치와 비슷하지만 -이 붙어있는 것 까지 선택하는 특수한 경우에 사용 ex [title|=att4] fontstyle : italic;
+                        </li>
+                        <li title="att5">
+                            특정 값으로 시작하는 속성을 가진 tag 선택 가능 ex [title^=at] background : yellow;
+                        </li>
+                        <li title="att6">
+                            특정 값으로 끝나는 속성을 가진 tag 선택 가능 ex [title$=t6] textalign="center";
+                        </li>
+                        <li title="att7">
+                            일부가 일치 하는 값을 가진 속성의 tag 선택 가능 ex [title*=tt] text-shadow: 2px 1px rebeccapurple;
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        가상 클래스 선택자와 가상 요소
+                    </legend>
+                    <p>
+                        사용자의 동작에 반응 하는 가상 클래스로서
+                    </p>
+                    <p>
+                        특정한 상황에 맞추어 스타일을 변경할 수 있다
+                    </p>
+                    <ul id="test10">
+                        <a href="dummy.html">
+                            <li>
+                                :link 방문한 기록이 없는 링크 ul a:link {color:blue;}
+                            </li>
+                        </a>
+                        <a href="dummy2.html">
+                            <li>
 
-                            :visited 방문한 기록이 있는 링크 ul a:visited {color:red;}
-                        </li>
-                    </a>
-                    <li>
-                        :active 요소가 활성화 되었을 때 ex #activetest:active {width: 600px;}
-                    </li>
-                    <input type="button" value=":active" id="activetest">
-                    <li>
-                        :hover 요소 위에 마우스를 올렸을 때 ex #hovertest:hover {width:600px;}
-                    </li>
-                    <input type="button" value=":hover" id="hovertest">
-                    <a href="#activetest">
+                                :visited 방문한 기록이 있는 링크 ul a:visited {color:red;}
+                            </li>
+                        </a>
                         <li>
-                            :target 링크와 같이 써야 하며 active하면 ex #activetest:target{background : red;}
+                            :active 요소가 활성화 되었을 때 ex #activetest:active {width: 600px;}
                         </li>
-                    </a>
-                    <a href="#hovertest">
+                        <input type="button" value=":active" id="activetest">
                         <li>
-                            :target 가리키는 대상의 스타일을 변화시킨다 ex #hovertest:target{background : blue;}
+                            :hover 요소 위에 마우스를 올렸을 때 ex #hovertest:hover {width:600px;}
                         </li>
-                    </a>
-                    <li>
-                        :enabled, :disabled 해당 대상이 enabled나 disabled일때 스타일을 변화시킨다 ex .abledtest:enabled,disabled
-                        {background: red,blue;}
-                    </li>
-                    <input type="button" value="enable" class="abledtest" style="width:600px"> <input type="button"
-                        value="disabled" class="abledtest" disabled style="width:600px">
-                    <li>
-                        :checked 해당 대상이 라디오나 체크 일때 체크했을 경우 스타일을 변화 ex #checkedtest:checked + label {background :
-                        black;color : white;}
-                    </li>
-                    <input type="checkbox" name="test" id="checkedtest"><label for="checkedtest">checkedtest</label>
-                    <li>
-                        :not 해당 이외의 대상을 선택 ex ul input[type=radio]:not([name=nott2]) + label {background : black}
-                    </li>
-                    <input type="radio" name="nott1" id="aa"><label for="#aa">a</label>
-                    <input type="radio" name="nott2" id="bb"><label for="#bb">b</label>
-                    <input type="radio" name="nott3" id="cc"><label for="#cc">c</label>
-                    <li>
-                        문서 구조에 따라서 선택도 가능하다 :only-child, :first-child, :last-child, nth-child(n), nth-last_child(n)
-                    </li>
-                    <li>
-                        임의의 부모 아래에서 임의의 자식이 하나뿐일때 선택, 여러 자식중 첫번째, 여러 자식중 마지막, 여러 자식중 n번째, 여러 자식중 마지막에서 n번째
-                    </li>
-                    <li>
-                        또 :앞에 tag를 붙인 다음 child를 of type로 바꾸면 임의의 부모를 가진 해당 tag 중에서 각각이 선택된다 예외로 only child만 only type of
-                        로 변환
-                    </li>
-                    <li>
-                        ex #test10 li:last-of-type{font-weight: bold;}
-                    </li>
-                </ul>
-            </fieldset>
-            <h2 class="Chapter">Chapter.11</h2>
-            <fieldset>
-                <legend>
-                    변형
-                </legend>
-                <p>
-                    요소의 스타일을 변화 시키는 것
-                </p>
-                <p>
-                    2차원 변형과 3차원 변형으로 나뉨
-                </p>
-                <p>
-                    마우스를 올려 변형
-                </p>
-                <ul>
-                    <li>
-                        <span class="hover" onmouseover="translate3d(200,0,0)" onmouseout="reset()">translateX</span>
-                        <span class="hover" onmouseover="translate3d(0,200,0)" onmouseout="reset()">translateY</span>
-                        <span class="hover" onmouseover="translate3d(0,0,200)" onmouseout="reset()">translateZ(2차원이라 움직이지 않음)</span>
-                    </li>
-                    <li>
-                        <span class="hover" onmouseover="scale3d(2,1,1)" onmouseout="reset()">scaleX</span>
-                        <span class="hover" onmouseover="scale3d(1,2,1)" onmouseout="reset()">scaleY</span>
-                        <span class="hover" onmouseover="scale3d(1,1,2)" onmouseout="reset()">scaleZ(2차원이라 움직이지 않음)</span>
-                    </li>
-                    <li>
-                        <span class="hover" onmouseover="rotate3d(1,0,0,40)" onmouseout="reset()">rotateX</span>
-                        <span class="hover" onmouseover="rotate3d(0,1,0,40)" onmouseout="reset()">rotateY</span>
-                        <span class="hover" onmouseover="rotate3d(0,0,1,40)" onmouseout="reset()">rotateZ</span>
-                        <span class="hover" onmouseover="rotate3d(1,1,1,80)" onmouseout="reset()">rotate3d</span>
-                    </li>
-                    <li>
-                        <span class="hover" onmouseover="skew(20,0)" onmouseout="reset()">skewX</span>
-                        <span class="hover" onmouseover="skew(0,20)" onmouseout="reset()">skewY</span>
-                        <span class="hover" onmouseover="skew(30,-20)" onmouseout="reset()">skew</span>
-                    </li>
-                </ul>
-                <div id="move"></div>
-            </fieldset>
-            <fieldset>
-                <legend>
-                    트랜지션
-                </legend>
-                <p>
-                    트랜지션은 변형의 과정에 관여하는 스타일이다
-                </p>
-                <p>
-                    시간, 타이밍, 속도, 속성 등을 설정할 수 있다
-                </p>
-                <p>
-                    아래는 같은 변형에 트랜지션을 적용한 것이다
-                </p>
-                <p>
-                    transition: all 1s ease-out 0.3s;
-                </p>
-                <ul>
-                    <li>
-                        <span class="hover" onmouseover="translate3d2(200,0,0)" onmouseout="reset2()">translateX</span>
-                        <span class="hover" onmouseover="translate3d2(0,200,0)" onmouseout="reset2()">translateY</span>
-                        <span class="hover" onmouseover="translate3d2(0,0,200)" onmouseout="reset2()">translateZ(2차원이라 움직이지
-                            않음)</span>
-                    </li>
-                    <li>
-                        <span class="hover" onmouseover="scale3d2(2,1,1)" onmouseout="reset2()">scaleX</span>
-                        <span class="hover" onmouseover="scale3d2(1,2,1)" onmouseout="reset2()">scaleY</span>
-                        <span class="hover" onmouseover="scale3d2(1,1,2)" onmouseout="reset2()">scaleZ(2차원이라 움직이지 않음)</span>
-                    </li>
-                    <li>
-                        <span class="hover" onmouseover="rotate3d2(1,0,0,40)" onmouseout="reset2()">rotateX</span>
-                        <span class="hover" onmouseover="rotate3d2(0,1,0,40)" onmouseout="reset2()">rotateY</span>
-                        <span class="hover" onmouseover="rotate3d2(0,0,1,40)" onmouseout="reset2()">rotateZ</span>
-                        <span class="hover" onmouseover="rotate3d2(1,1,1,80)" onmouseout="reset2()">rotate3d</span>
-                    </li>
-                    <li>
-                        <span class="hover" onmouseover="skew2(20,0)" onmouseout="reset2()">skewX</span>
-                        <span class="hover" onmouseover="skew2(0,20)" onmouseout="reset2()">skewY</span>
-                        <span class="hover" onmouseover="skew2(30,-20)" onmouseout="reset2()">skew</span>
-                    </li>
-                </ul>
-                <div id="move2"></div>
-            </fieldset>
-            <fieldset>
-                <legend>
-                    애니메이션
-                </legend>
-                <p>
-                    시작과 끝, 그리고 변화점을 지정하여 animation 속성의 값으로 취급한다
-                </p>
-                <ul>
-                    <li>
-                        @keyframes rotate 로 이름을 지정, animation: rotate로 사용
-                    </li>
-                    <li>
-                        @keyframes 은 여러개를 사용할 수 있다, animation: rotate, background
-                    </li>
-                    <li>
-                        여기에 각 애니메이션의 진행시간이나 반복등을 지정할 수 있다
-                    </li>
-                    <li>
-                        <span class="hover" onmouseover="animation()">마우스를 올려 애니메이션 시작</span>
-                    </li>
-                    <li>
-                        <span class="hover" onmouseover="animationStop()">마우스를 올려 애니메이션 중지</span>
-                    </li>
-                </ul>
-                <div id="move3"></div>
-            </fieldset>
-            <h2 class="Chapter">Chapter.12</h2>
-            <fieldset>
-                <legend>
-                    반응형 웹
-                </legend>
-            </fieldset>
-            <fieldset>
-                <legend>
-                    미디어 쿼리
-                </legend>
-            </fieldset>
-            <fieldset>
-                <legend>
-                    그리드 레이아웃
-                </legend>
-            </fieldset>
-            <fieldset>
-                <legend>
-                    플렉스 박스 레이아웃
-                </legend>
-            </fieldset>
-            <fieldset>
-                <legend>
-                    CSS 그리드 레이아웃
-                </legend>
-            </fieldset>
+                        <input type="button" value=":hover" id="hovertest">
+                        <a href="#activetest">
+                            <li>
+                                :target 링크와 같이 써야 하며 active하면 ex #activetest:target{background : red;}
+                            </li>
+                        </a>
+                        <a href="#hovertest">
+                            <li>
+                                :target 가리키는 대상의 스타일을 변화시킨다 ex #hovertest:target{background : blue;}
+                            </li>
+                        </a>
+                        <li>
+                            :enabled, :disabled 해당 대상이 enabled나 disabled일때 스타일을 변화시킨다 ex .abledtest:enabled,disabled
+                            {background: red,blue;}
+                        </li>
+                        <input type="button" value="enable" class="abledtest" style="width:300px"> <input type="button"
+                            value="disabled" class="abledtest" disabled style="width:300px">
+                        <li>
+                            :checked 해당 대상이 라디오나 체크 일때 체크했을 경우 스타일을 변화 ex #checkedtest:checked + label {background :
+                            black;color : white;}
+                        </li>
+                        <input type="checkbox" name="test" id="checkedtest"><label for="checkedtest">checkedtest</label>
+                        <li>
+                            :not 해당 이외의 대상을 선택 ex ul input[type=radio]:not([name=nott2]) + label {background : black}
+                        </li>
+                        <input type="radio" name="nott1" id="aa"><label for="#aa">a</label>
+                        <input type="radio" name="nott2" id="bb"><label for="#bb">b</label>
+                        <input type="radio" name="nott3" id="cc"><label for="#cc">c</label>
+                        <li>
+                            문서 구조에 따라서 선택도 가능하다 :only-child, :first-child, :last-child, nth-child(n), nth-last_child(n)
+                        </li>
+                        <li>
+                            임의의 부모 아래에서 임의의 자식이 하나뿐일때 선택, 여러 자식중 첫번째, 여러 자식중 마지막, 여러 자식중 n번째, 여러 자식중 마지막에서 n번째
+                        </li>
+                        <li>
+                            또 :앞에 tag를 붙인 다음 child를 of type로 바꾸면 임의의 부모를 가진 해당 tag 중에서 각각이 선택된다 예외로 only child만 only
+                            type of
+                            로 변환
+                        </li>
+                        <li>
+                            ex #test10 li:last-of-type{font-weight: bold;}
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div class="chapterdiv">
+                <h2 class="chapter">Chapter.11</h2>
+                <fieldset class="ch11">
+                    <legend>
+                        변형
+                    </legend>
+                    <p>
+                        요소의 스타일을 변화 시키는 것
+                    </p>
+                    <p>
+                        2차원 변형과 3차원 변형으로 나뉨
+                    </p>
+                    <p>
+                        마우스를 올려 변형
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="hover" onmouseover="translate3d(-200,0,0)"
+                                onmouseout="reset()">translateX</span>
+                            <span class="hover" onmouseover="translate3d(0,-200,0)"
+                                onmouseout="reset()">translateY</span>
+                            <span class="hover" onmouseover="translate3d(0,0,200)" onmouseout="reset()">translateZ(2차원이라
+                                움직이지 않음)</span>
+                        </li>
+                        <li>
+                            <span class="hover" onmouseover="scale3d(2,1,1)" onmouseout="reset()">scaleX</span>
+                            <span class="hover" onmouseover="scale3d(1,2,1)" onmouseout="reset()">scaleY</span>
+                            <span class="hover" onmouseover="scale3d(1,1,2)" onmouseout="reset()">scaleZ(2차원이라 움직이지
+                                않음)</span>
+                        </li>
+                        <li>
+                            <span class="hover" onmouseover="rotate3d(1,0,0,40)" onmouseout="reset()">rotateX</span>
+                            <span class="hover" onmouseover="rotate3d(0,1,0,40)" onmouseout="reset()">rotateY</span>
+                            <span class="hover" onmouseover="rotate3d(0,0,1,40)" onmouseout="reset()">rotateZ</span>
+                            <span class="hover" onmouseover="rotate3d(1,1,1,80)" onmouseout="reset()">rotate3d</span>
+                        </li>
+                        <li>
+                            <span class="hover" onmouseover="skew(20,0)" onmouseout="reset()">skewX</span>
+                            <span class="hover" onmouseover="skew(0,20)" onmouseout="reset()">skewY</span>
+                            <span class="hover" onmouseover="skew(30,-20)" onmouseout="reset()">skew</span>
+                        </li>
+                    </ul>
+                    <div id="move"></div>
+                </fieldset>
+                <fieldset class="ch11">
+                    <legend>
+                        트랜지션
+                    </legend>
+                    <p>
+                        트랜지션은 변형의 과정에 관여하는 스타일이다
+                    </p>
+                    <p>
+                        시간, 타이밍, 속도, 속성 등을 설정할 수 있다
+                    </p>
+                    <p>
+                        아래는 같은 변형에 트랜지션을 적용한 것이다
+                    </p>
+                    <p>
+                        transition: all 1s ease-out 0.3s;
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="hover" onmouseover="translate3d2(-200,0,0)"
+                                onmouseout="reset2()">translateX</span>
+                            <span class="hover" onmouseover="translate3d2(0,-200,0)"
+                                onmouseout="reset2()">translateY</span>
+                            <span class="hover" onmouseover="translate3d2(0,0,200)"
+                                onmouseout="reset2()">translateZ(2차원이라
+                                움직이지
+                                않음)</span>
+                        </li>
+                        <li>
+                            <span class="hover" onmouseover="scale3d2(2,1,1)" onmouseout="reset2()">scaleX</span>
+                            <span class="hover" onmouseover="scale3d2(1,2,1)" onmouseout="reset2()">scaleY</span>
+                            <span class="hover" onmouseover="scale3d2(1,1,2)" onmouseout="reset2()">scaleZ(2차원이라 움직이지
+                                않음)</span>
+                        </li>
+                        <li>
+                            <span class="hover" onmouseover="rotate3d2(1,0,0,40)" onmouseout="reset2()">rotateX</span>
+                            <span class="hover" onmouseover="rotate3d2(0,1,0,40)" onmouseout="reset2()">rotateY</span>
+                            <span class="hover" onmouseover="rotate3d2(0,0,1,40)" onmouseout="reset2()">rotateZ</span>
+                            <span class="hover" onmouseover="rotate3d2(1,1,1,80)" onmouseout="reset2()">rotate3d</span>
+                        </li>
+                        <li>
+                            <span class="hover" onmouseover="skew2(20,0)" onmouseout="reset2()">skewX</span>
+                            <span class="hover" onmouseover="skew2(0,20)" onmouseout="reset2()">skewY</span>
+                            <span class="hover" onmouseover="skew2(30,-20)" onmouseout="reset2()">skew</span>
+                        </li>
+                    </ul>
+                    <div id="move2"></div>
+                </fieldset>
+                <fieldset class="ch11">
+                    <legend>
+                        애니메이션
+                    </legend>
+                    <p>
+                        시작과 끝, 그리고 변화점을 지정하여 animation 속성의 값으로 취급한다
+                    </p>
+                    <ul>
+                        <li>
+                            @keyframes rotate 로 이름을 지정, animation: rotate로 사용
+                        </li>
+                        <li>
+                            @keyframes 은 여러개를 사용할 수 있다, animation: rotate, background
+                        </li>
+                        <li>
+                            여기에 각 애니메이션의 진행시간이나 반복등을 지정할 수 있다
+                        </li>
+                        <li>
+                            <span class="hover" onmouseover="animation()">마우스를 올려 애니메이션 시작</span>
+                        </li>
+                        <li>
+                            <span class="hover" onmouseover="animationStop()">마우스를 올려 애니메이션 중지</span>
+                        </li>
+                    </ul>
+                    <div id="move3"></div>
+                </fieldset>
+            </div>
+            <div class="chapterdiv">
+                <h2 class="chapter">Chapter.12</h2>
+                <div id="gridShow">
+                    <fieldset>
+                        <legend>
+                            반응형 웹
+                        </legend>
+                        <p>
+                            pc의 화면은 물론 계속 다양한 화면 크기의 모바일 기기들이 나오는 중인데
+                        </p>
+                        <p>
+                            이 화면크기의 차이는 만든 웹 사이트의 스타일을 의도대로 전달하기 어렵게 만든다
+                        </p>
+                        <p>
+                            이 때 반응형 웹으로 화면 크기에 반응해 요소들을 자동으로 알맞게 바꾸어 일관적인 경험을 전달한다
+                        </p>
+                        <ul>
+                            <li>
+                                meta name="viewport" content="width=device-width, initial-scale=1.0"
+                            </li>
+                            <li>
+                                viewport를 써서 길이를 장치의 크기에 맞추고 1배율로 보여주는 기본 사용법이다
+                            </li>
+                            <li>
+                                1vw, 1vh 각각 뷰포트 너비와 높이의 1%를 뜻한다
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            미디어 쿼리
+                        </legend>
+                        <ul>
+                            <li>
+                                미디어 쿼리 @media 미디어 유형 and (조건) and 조건 {}
+                            </li>
+                            <li>
+                                ex @media screen and (min-width: 1800px) {}
+                            </li>
+                            <li>
+                                이것을 사용해서 가로 길이 1800px이상에서 변화를 줄 수 있다
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            그리드 레이아웃
+                        </legend>
+                        <li>
+                            그리드 레이아웃이란 화면을 박스 형태로 나누어 배치하여 일관성있게 보이게 한다
+                        </li>
+                        <li>
+                            플렉스 레이아웃과 css 그리드 레이아웃이 있는데 보통 그리드 레이아웃이라 하면 후자를 가리킨다
+                        </li>
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            플렉스 박스 레이아웃
+                        </legend>
+                        <li>
+                            플렉스 박스는 주 축을 기준으로 나열하고 스타일링하며 교차축을 간단하게 조정할 수 있다
+                        </li>
+                        <li>
+                            ex @media screen and (min-width: 1800px) {
+                            #flex1800 {
+                            display: flex;
+                            flex-wrap: wrap;
+                            }
+                            }
+                        </li>
+                        <li>
+                            이 페이지에 사용한 예시로 가로 길이 1800px이상에서 행(기본값)을 주축으로 플렉스 배치를 사용하며 여러 행을 사용 할 수 있게 wrap속성을 부여하였다
+                        </li>
+                        <li>
+                            추가로 justify-content, align-items 를 사용하여 정렬이 가능하며 align-content로 여러 주축을 가질 때도 정렬이 가능하다
+                        </li>
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            CSS 그리드 레이아웃
+                        </legend>
+                        <ul>
+                            <li>
+                                플렉스 레이아웃과 달리 주축 교차축 개념이 없이 표과 비슷하게 행열개념을 사용한다
+                            </li>
+                            <li>
+                                ex #gridShow {
+                                    display: grid;
+                                    grid-template-columns: repeat(auto-fit, minmax(320px, 50%));
+                                }
+                            </li>
+                            <li>
+                                이렇게 가로 길이가 최소 300px, 최대 50%가 되게 자동으로 채울 수도 있고
+                            </li>
+                            <li>
+                                grid-trmplate-columns: 50% 50%로 각각 지정할 수도 있다
+                            </li>
+                            <li>
+                                그리드 라인 각 행열에는 제일 왼쪽 위부터 번호가 붙는다
+                            </li>
+                            <li>
+                                이 그리드 같은 경우엔 행이 1,2,3,4 열이 1,2,3
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </div>
         </div>
     </div>
 </body>

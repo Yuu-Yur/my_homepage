@@ -1,3 +1,4 @@
+// 야간모드
 function setColor(color) {
     var alist = document.querySelectorAll('a');
     var i = 0;
@@ -31,7 +32,7 @@ function nightDayHandler(self) {
 }
 }
 
-
+// 사이드 설정
 function setside() {
     document.write(' <ol id="menu"> ')
     document.write('<li><a href="1.html">HTML</a></li>')
@@ -44,6 +45,8 @@ function setside() {
     document.write(' </ol>')
 }
 
+
+// 10장 실습
 function translate3d(a, b, c) {
     // 대상 요소 선택
     let target = document.getElementById("move");
@@ -134,7 +137,7 @@ function animationStop() {
     target.style.animation = "none";
 }
 
-
+// 12장 실습
 
 // 점심 메뉴 실습
 function changeImage(imageName) {
@@ -151,3 +154,4 @@ function changeImage(imageName) {
         image.innerHTML = "해피통닭<br>부산광역시 부산진구 중앙대로680번가길 70<br>추천메뉴 : 후반/양념반 22900원"
     }
 }
+
