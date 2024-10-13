@@ -38,9 +38,9 @@ function setside() {
     document.write('<li><a href="1.html">HTML</a></li>')
     document.write('<li><a href="2.html">CSS</a></li>')
     document.write('<li><a href="3.html">JavaScript</a></li>')
-    document.write('<li><a href="9.html">5~9장</a> </li>')
-    document.write('<li><a href="10.html" class="new">10~12장</a></li>')
-    document.write('<li><a href="11.html" class="new">13장</a></li>')
+    document.write('<li><a href="9.html">5~9장 html+CSS</a> </li>')
+    document.write('<li><a href="10.html" class="new">10~12장 CSS</a></li>')
+    document.write('<li><a href="13.html" class="new">13장~17장 JavaScript</a></li>')
     document.write('<li><a href="lunchMenu.html" class="new">제일 좋아하는 점심 메뉴!</a></li>')
     document.write(' </ol>')
 }
