@@ -295,27 +295,18 @@ li .hover {
 
 
 /* 점심메뉴 실습 */
-#lunchList {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 0;
-}
-
-#lunchList>li {
-    margin: 10px;
-    padding: 10px;
-    font-size: 30px;
-    width: 300px;
+#lunchMenu {
     text-align: center;
+    align-content: center;
+    font-weight: bold;
+    height: 100px;
     border: 1px solid violet;
-    border-radius: 5px;
     background-color: crimson;
-}
-
-#lunchList>li>a {
-    color: white;
+    color: aliceblue;
+    border-radius: 5px;
+    font-size: 30px;
+    margin: 0 300px;
+    min-width: 300px;
 }
 
 #lunchMenuDisplay {
@@ -330,4 +321,27 @@ li .hover {
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 1px -1px black, 1px 1px black, -1px 1px black, -1px -1px black;
+    background-position: center;
+    background-size: cover;
+}
+
+#menuFlex {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#addMenu {
+    text-align: center;
+}
+
+#menuList {
+    list-style-type: none;
+}
+
+#addMenu > input {
+    height: 40px;
+    font-size: large;
+}
+#addMenu > h1 {
+    border: 0;
 }

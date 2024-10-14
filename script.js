@@ -16,35 +16,38 @@ function nightDayHandler(self) {
         target.style.backgroundColor = 'black';
         target.style.color = 'white';
         self.value = 'day mode'
-        targetInput.style.color ='white';
-        targetInput.style.backgroundColor='darkblue';
+        targetInput.style.color = 'white';
+        targetInput.style.backgroundColor = 'darkblue';
 
         setColor('powderblue');
     }
- else {
-    target.style.backgroundColor = 'white';
-    target.style.color = 'black';
-    self.value = 'night mode'
-    targetInput.style.color ='black';
-    targetInput.style.backgroundColor='seashell';
+    else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value = 'night mode'
+        targetInput.style.color = 'black';
+        targetInput.style.backgroundColor = 'seashell';
 
-    setColor('blue');
-}
+        setColor('blue');
+    }
 }
 
 // 사이드 설정
 function setside() {
-    document.write(' <ol id="menu"> ')
-    document.write('<li><a href="1.html">HTML</a></li>')
-    document.write('<li><a href="2.html">CSS</a></li>')
-    document.write('<li><a href="3.html">JavaScript</a></li>')
-    document.write('<li><a href="9.html">5~9장 html+CSS</a> </li>')
-    document.write('<li><a href="10.html" class="new">10~12장 CSS</a></li>')
-    document.write('<li><a href="13.html" class="new">13장~17장 JavaScript</a></li>')
-    document.write('<li><a href="lunchMenu.html" class="new">제일 좋아하는 점심 메뉴!</a></li>')
-    document.write(' </ol>')
+    const side = document.getElementById("side");
+    const menu = `
+    <ol id="menu"> 
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+    <li><a href="9.html">5~9장 html+CSS</a> </li>
+    <li><a href="10.html" class="new">10~12장 CSS</a></li>
+    <li><a href="13.html" class="new">13장~17장 JavaScript</a></li>
+    <li><a href="lunchMenu.html" class="new">제일 좋아하는 점심 메뉴!</a></li>
+    </ol>`;
+    side.innerHTML = menu;
 }
-
+setside();
 
 // 10장 실습
 function translate3d(a, b, c) {
@@ -137,21 +140,75 @@ function animationStop() {
     target.style.animation = "none";
 }
 
-// 12장 실습
 
 // 점심 메뉴 실습
-function changeImage(imageName) {
-    var image = document.getElementById("lunchMenuDisplay");
-    image.style.background = `url('${imageName}.jpg')`;
-    image.style.backgroundRepeat = "no-repeat";
-    image.style.backgroundSize = "contain";
-    image.style.backgroundPosition = "center";
-    if(imageName=='서면 롤링파스타') {
-    image.innerHTML = "서면 롤링파스타<br>부산광역시 부산진구 서전로 10번길 60<br>추천메뉴 : 바질 페스토 크림 파스타 8900원";
-    } else if(imageName=='장모족발') {
-    image.innerHTML = "장모족발 서면점<br>부산광역시 부산진구 동천로 132번길 6<br>추천메뉴 : 매일삶는장모왕족 앞다리 소 24000원";
-    } else { 
-        image.innerHTML = "해피통닭<br>부산광역시 부산진구 중앙대로680번가길 70<br>추천메뉴 : 후반/양념반 22900원"
+let randomNumber = 0;
+let selectedMenu = 0;
+const menu = ['포항돼지국밥', '용이네탕슉', '화전국수', '서브웨이', '해피통닭', '봉추찜닭', '기장손칼국수', '샐러드바스켓', '문화양곱창', '온센'];
+const price = ['9000원', '36000원', '7000원', '7400원', '18000원', '25000원', '5000원', '6500원', '40000원', '11000원'];
+document.getElementById("lunchMenu").addEventListener("click", function () {
+    randomNumber = Math.floor(Math.random() * menu.length);
+    console.log(randomNumber);
+    selectedMenu = menu[randomNumber];
+    selectedprice = price[randomNumber];
+    document.getElementById('lunchMenuDisplay').innerHTML = `${selectedMenu} <br> ${selectedprice}`;
+    document.getElementById('lunchMenuDisplay').style.background = `url(${selectedMenu}.jpg) no-repeat`;
+    document.getElementById('lunchMenuDisplay').style.backgroundSize = "contain";
+    document.getElementById('lunchMenuDisplay').style.backgroundPosition = "center";
+});
+
+function addMenuItem() {
+    const menuInput = document.getElementById('menuInput').value;
+    const priceInput = document.getElementById('priceInput').value;
+
+    // not menu입력 or not price입력로 체크
+    if (!menuInput || !priceInput) {
+        alert('메뉴 이름과 가격을 모두 입력하세요.');
+        return;
     }
+
+    // 배열에 추가
+    menu.push(menuInput);
+    price.push(priceInput);
+
+    // 입력값 초기화
+    document.getElementById('menuInput').value = '';
+    document.getElementById('priceInput').value = '';
+
+    // 메뉴 목록 업데이트
+    updateMenuList();
 }
 
+function updateMenuList() {
+    const menuList = document.getElementById('menuList');
+    menuList.innerHTML = ''; // 기존 목록 초기화
+
+    // 현재 메뉴를 목록에 추가
+    for (let i = 0; i < menu.length; i++) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${menu[i]} - ${price[i]}`;
+
+        // 삭제 버튼 생성
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = '삭제';
+        deleteButton.className = 'delete-button';
+        deleteButton.addEventListener("click", function() {
+            deleteMenuItem(i);
+        }); //이벤트 리스너로 삭제버튼에 각각 인덱스의 번호에 맞는 삭제 함수를 부여
+
+        listItem.appendChild(deleteButton); // 삭제 버튼을 목록 항목에 추가
+        menuList.appendChild(listItem); // 목록에 항목 추가
+    };
+}
+
+function deleteMenuItem(index) {
+    // 스플라이스로 받은 매개변수부터 1개의 인덱스를 제거
+    menu.splice(index, 1);
+    price.splice(index, 1);
+
+    // 메뉴 목록 업데이트
+    updateMenuList();
+}
+
+// 초기 메뉴 목록 표시
+updateMenuList();

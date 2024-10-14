@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <title>Document</title>
 </head>
 
@@ -14,24 +13,27 @@
     <div id="grid">
         <div id="side">
             <input type="button" value="night mode" onclick="nightDayHandler(this);">
-            <script>setside()</script>
         </div>
-        <div style="padding-left: 10px;">
+        <div id="menuFlex" style="margin-left: 10px;">
             <h2 class="Chapter">제일 좋아하는 점심 메뉴!</h2>
-            <ul id="lunchList">
-                <li>
-                    <a href="#" onclick="changeImage('서면 롤링파스타')">서면 롤링파스타</a>
-                </li>
-                <li>
-                    <a href="#" onclick="changeImage('장모족발')">장모족발</a>
-                </li>
-                <li>
-                    <a href="#" onclick="changeImage('해피통닭')">해피통닭</a>
-                </li>
-            </ul>
+            <p id="lunchMenu">
+                점심 메뉴 룰렛
+            </p>
             <div id="lunchMenuDisplay">
             </div>
+            <div id="addMenu">
+                <h1>메뉴 추가하기</h1>
+
+                <input type="text" id="menuInput" placeholder="메뉴 이름" />
+                <input type="text" id="priceInput" placeholder="가격" />
+                <button onclick="addMenuItem()">메뉴 추가</button>
+
+                <h2>현재 메뉴</h2>
+                <ul id="menuList"></ul>
+            </div>
         </div>
+
+        <script src="script.js"></script>
 </body>
 
 </html>

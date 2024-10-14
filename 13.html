@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <title>JavaScript</title>
 </head>
 
@@ -14,7 +13,6 @@
     <div id="grid">
         <div id="side">
             <input type="button" value="night mode" onclick="nightDayHandler(this);">
-            <script>setside()</script>
         </div>
         <div>
             <div class="chapterdiv">
@@ -282,11 +280,40 @@
                     <legend>
                         함수 알아보기
                     </legend>
+                    <p>
+                        함수란 명령을 묶어 놓은것이다
+                    </p>
+                    <p>
+                        함수를 호출하여 사용할 수 있어 유지보수에 이점이 있다
+                    </p>
+                    <p>
+                        function 함수명 {명령} 으로 선언 가능하다
+                    </p>
                 </fieldset>
                 <fieldset>
                     <legend>
                         var를 사용한 변수의 특징
                     </legend>
+                    <p>
+                        var은 변수 선언 예약어 중의 하나이다
+                    </p>
+                    <p>
+                        가장 간단한 변수 선언어로 호이스팅, 재선언, 재할당 문제때문에 최근엔 잘 쓰이지 않는다
+                    </p>
+                    <ul>
+                        <li>
+                            변수는 기본적으로 선언 - 사용의 순서지만 순서가 역전되어도 일단은 작동하는것으로 버그의 근원이다
+                        </li>
+                        <li>
+                            재선언, 재할당이 가능하기에 의도하지 않은 상황에서 의도하지 않은 변수를 사용할 가능성이 있다
+                        </li>
+                        <li>
+                            전역변수는 스크립트 전체에서 사용하며 함수 밖에서 선언하거나 함수내에서 선언예약어 없이 선언하는 경우에 전역함수가 된다
+                        </li>
+                        <li>
+                            지역변수는 함수 내에서 선언된 변수로 함수 내에서만 작동한다
+                        </li>
+                    </ul>
                 </fieldset>
                 <fieldset>
                     <legend>
@@ -315,6 +342,7 @@
                 </fieldset>
             </div>
         </div>
+        <script src="script.js"></script>
 </body>
 
 </html>
