@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        var n = 0;
+        $(document).ready(function () {
+            // 스타일 변경
+            // $("button").mousedown(function() {
+            //     $("#backColor").css({"background-color": "blue"});
+            // });
+            // $("button").mouseup(function() {
+            //     $("#backColor").css({"background-color":"white"});
+            // });
+
+            // 클래스 추가제거
+            // $("button").mousedown(function () {
+            //     $("#backColor").addClass("blue");
+            // });
+            // $("button").mouseup(function () {
+            //     $("#backColor").removeClass("blue");
+            // })
+
+            // 클래스 토글(추가제거 합침)
+            // $("button").mousedown(function () {
+            //     $("#backColor").toggleClass("blue");
+            // });
+        });
+    </script>
+    <style>
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="padding: 30px;" id="backColor">
+        <button>누르면 배경색 바뀜</button>
+    </div>
+</body>
+
+</html>
