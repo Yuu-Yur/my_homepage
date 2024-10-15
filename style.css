@@ -261,7 +261,7 @@ li .hover {
 
 #gridEx {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4,1fr);
     grid-template-areas: 
     "box1 box1 box1 ."
