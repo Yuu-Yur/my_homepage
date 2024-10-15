@@ -152,7 +152,7 @@ document.getElementById("lunchMenu").addEventListener("click", function () {
     selectedMenu = menu[randomNumber];
     selectedprice = price[randomNumber];
     document.getElementById('lunchMenuDisplay').innerHTML = `${selectedMenu} <br> ${selectedprice}`;
-    document.getElementById('lunchMenuDisplay').style.background = `url(${selectedMenu}.jpg) no-repeat`;
+    document.getElementById('lunchMenuDisplay').style.background = `url(images/${selectedMenu}.jpg) no-repeat`;
     document.getElementById('lunchMenuDisplay').style.backgroundSize = "contain";
     document.getElementById('lunchMenuDisplay').style.backgroundPosition = "center";
 });
