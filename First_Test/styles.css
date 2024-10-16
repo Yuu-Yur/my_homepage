@@ -112,7 +112,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
     color: #585115;
 }
 
-.footer {
+.footer, footer {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -122,7 +122,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
     border-radius: 20px;
 }
 
-.footer div {
+.footer div, footer div {
     width: 50%;
     text-align: center;
 }
