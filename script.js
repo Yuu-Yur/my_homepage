@@ -45,6 +45,7 @@ function setside() {
     <li><a href="13.html" class="new">13장~17장 JavaScript</a></li>
     <li><a href="lunchMenu.html" class="new">제일 좋아하는 점심 메뉴!</a></li>
     <li><a href="bootstrapBlog.html" class="new">부트스트랩으로 템플릿가져오기</a></li>
+    <li><a href="First_Test/signIn.html" class="new">FirstTest</a></li>
     </ol>
     `;
     side.innerHTML = menu;
