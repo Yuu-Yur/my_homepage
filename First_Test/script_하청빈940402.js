@@ -1,7 +1,7 @@
 // Event listener for the form submission
 document.getElementById("signInForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
-    window.location.href = "mainpage.html"; // Redirect to the main page after signing in
+    window.location.href = "mainpage_하청빈940402.html"; // Redirect to the main page after signing in
 });
 
 const topics = document.getElementsByClassName("topic");

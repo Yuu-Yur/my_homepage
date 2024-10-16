@@ -1,5 +1,5 @@
 document.querySelector('.signOut').addEventListener('click', function () {
-    window.location.href = 'signin.html'; // 로그인 페이지로 리디렉션
+    window.location.href = 'signin_하청빈940402.html'; // 로그인 페이지로 리디렉션
 });
 
 // 샘플 데이터 - 실제 데이터로 교체 가능
@@ -80,5 +80,5 @@ displayItems(currentPage);
 
 // 상세 페이지로 이동하는 함수
 function goToDetailPage(itemId) {
-    window.location.href = `detail.html?id=${itemId}`; // 상세 페이지 URL
+    window.location.href = `detail_하청빈940402.html?id=${itemId}`; // 상세 페이지 URL
 }
